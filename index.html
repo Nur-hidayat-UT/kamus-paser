@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kamus Paser - Dashboard</title>
+<script src="assets/js/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 border-b border-outline-variant flex items-center justify-between px-margin-mobile py-sm backdrop-blur-md bg-[#fdf6e3]/90">
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-150 p-2 hover:bg-surface-container transition-colors rounded-full" onclick="window.location.href='{{DATA:SCREEN:SCREEN_9}}'">menu</button>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Kamus Paser</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-150 p-2 hover:bg-surface-container transition-colors rounded-full">search</button>
+</div>
+</header>
+<main class="max-w-md mx-auto px-margin-mobile pt-lg space-y-lg">
+<!-- Search Bar Section -->
+<section class="w-full">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all inset-shadow font-body-md text-body-md text-on-surface placeholder-on-surface-variant/60" placeholder="Cari kata Paser atau Indonesia..." type="text">
+</div>
+</section>
+<!-- Word of the Day Card -->
+<section class="relative overflow-hidden">
+<div class="bg-primary-container p-lg rounded-xl custom-shadow text-white relative z-10">
+<div class="flex justify-between items-start mb-md">
+<span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full font-label-sm text-label-sm uppercase tracking-wider">Kata Hari Ini</span>
+<button class="material-symbols-outlined text-white p-1 hover:bg-white/10 rounded-full transition-colors" style="font-variation-settings: 'FILL' 1;">volume_up</button>
+</div>
+<div class="space-y-xs">
+<h2 class="font-display-lg text-display-lg text-white">Buen</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed italic opacity-90">Adjektiva</p>
+</div>
+<div class="mt-md border-t border-white/10 pt-md">
+<p class="font-headline-sm text-headline-sm text-white">Bagus, Baik, Cantik</p>
+<p class="mt-sm font-body-md text-body-md text-white/80 leading-relaxed italic">"Buen nate, buen rupa." (Hati baik, wajah cantik.)</p>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-white/5 rounded-full blur-3xl"></div>
+</section>
+<!-- Categorized Grid -->
+<section>
+<div class="flex items-center justify-between mb-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Kategori Kata</h3>
+<button class="text-primary font-label-md text-label-md hover:underline">Lihat Semua</button>
+</div>
+<div class="grid grid-cols-3 gap-md">
+<!-- Nouns -->
+<button class="flex flex-col items-center justify-center p-md bg-white border border-outline-variant rounded-xl hover:bg-secondary-container transition-all group active:scale-95 duration-150">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-sm group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">category</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Benda</span>
+</button>
+<!-- Verbs -->
+<button class="flex flex-col items-center justify-center p-md bg-white border border-outline-variant rounded-xl hover:bg-secondary-container transition-all group active:scale-95 duration-150">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-sm group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">directions_run</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Kerja</span>
+</button>
+<!-- Adjectives -->
+<button class="flex flex-col items-center justify-center p-md bg-white border border-outline-variant rounded-xl hover:bg-secondary-container transition-all group active:scale-95 duration-150">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-sm group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">palette</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Sifat</span>
+</button>
+</div>
+</section>
+<!-- Recent Searches -->
+<section class="space-y-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Terakhir Dilihat</h3>
+<div class="bg-white rounded-xl border border-outline-variant divide-y divide-outline-variant/30 overflow-hidden">
+<div class="p-md flex items-center justify-between hover:bg-surface-container transition-colors cursor-pointer group" onclick="window.location.href='{{DATA:SCREEN:SCREEN_3}}'">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant">history</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Kakah</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kakek</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<div class="p-md flex items-center justify-between hover:bg-surface-container transition-colors cursor-pointer group" onclick="window.location.href='{{DATA:SCREEN:SCREEN_3}}'">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant">history</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Taka</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kita / Kami</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Culture Snippet -->
+<section class="mt-lg">
+<div class="rounded-xl overflow-hidden relative h-40 group cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_1}}'">
+<img alt="Tradisi Budaya Paser" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9sM3hPLL2xNoEnLBm2lipiPv6bz47X2VMWdWn2KETPyBfbC-RK9KV9Etm_4RvuYkd1r0D59pWmYJsYdQcuXTbFTgxTR6Gx8qDToxHENdRQXPh8JgBB8fzzipcD7bMomPlA0meEQC_6nqDWwhctLB_EWGzf1LRx8RY0hb3kCx3FKms0Yj4XORR_UJ_KTO_xKo2kY8D5E7LOR1-D0N0duN2-6JpdX7CUNlvzZYlRiOGkmOLwNL8ihAmMw">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-md">
+<h4 class="font-headline-sm text-headline-sm text-white">Mengenal Budaya Paser</h4>
+<p class="font-body-sm text-body-sm text-white/80">Pelajari asal-usul bahasa dan tradisi lokal.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button (FAB) -->
+<div class="fixed bottom-24 right-6 z-50">
+<button class="w-14 h-14 rounded-full bg-primary text-white custom-shadow flex items-center justify-center active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-3 pb-safe shadow-[0_-1px_0_0_rgba(0,0,0,0.05)] bg-[#fdf6e3]/80 backdrop-blur-md border-t border-outline-variant/30">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-4 py-1.5 active:scale-95 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm mt-0.5">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-all active:scale-95 duration-200 ease-in-out" href="{{DATA:SCREEN:SCREEN_6}}">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-sm text-label-sm mt-0.5">Favorites</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-all active:scale-95 duration-200 ease-in-out" href="{{DATA:SCREEN:SCREEN_7}}">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-sm text-label-sm mt-0.5">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-all active:scale-95 duration-200 ease-in-out" href="{{DATA:SCREEN:SCREEN_2}}">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm mt-0.5">Profile</span>
+</a>
+</nav>
+<script src="assets/js/app.js"></script>
+</body></html>

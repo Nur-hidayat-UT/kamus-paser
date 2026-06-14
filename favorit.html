@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Favorit - Kamus Paser</title>
+<script src="assets/js/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen pb-24 font-serif">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50" style="background-color: #FDF5E6;">
+<div class="flex items-center justify-between px-margin-mobile h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-4">
+<a href="{{DATA:SCREEN:SCREEN_9}}" class="material-symbols-outlined text-primary cursor-pointer transition-opacity hover:opacity-80 active:scale-95 duration-150 p-2 rounded-full">menu</a>
+<h1 class="font-display-lg text-display-lg font-bold text-primary">Kamus Paser</h1>
+</div>
+<div class="flex items-center gap-4">
+<a href="{{DATA:SCREEN:SCREEN_9}}" class="material-symbols-outlined text-primary cursor-pointer transition-opacity hover:opacity-80 active:scale-95 duration-150 p-2 rounded-full">menu</a>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-margin-mobile max-w-screen-xl mx-auto">
+<!-- Header Section -->
+<div class="mb-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs">Kata Favorit</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kumpulan kosakata Paser pilihanmu.</p>
+</div>
+<!-- Favorites List -->
+<div class="space-y-md" id="favorites-container">
+<!-- List Item 1 -->
+<div class="group relative flex items-center justify-between bg-white p-md rounded-xl shadow-sm border border-transparent transition-all hover:border-primary-container active:scale-[0.98]">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Buen</h3>
+<span class="bg-[#065f461a] text-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm">Adjektiva</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Bagus / Baik</p>
+</div>
+<button class="p-2 rounded-full hover:bg-error-container/10 transition-all" onclick="removeItem(this)">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- List Item 2 -->
+<div class="group relative flex items-center justify-between bg-white p-md rounded-xl shadow-sm border border-transparent transition-all hover:border-primary-container active:scale-[0.98]">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Taka</h3>
+<span class="bg-[#065f461a] text-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm">Pronomina</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Kita / Kami</p>
+</div>
+<button class="p-2 rounded-full hover:bg-error-container/10 transition-all" onclick="removeItem(this)">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- List Item 3 -->
+<div class="group relative flex items-center justify-between bg-white p-md rounded-xl shadow-sm border border-transparent transition-all hover:border-primary-container active:scale-[0.98]">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Kio</h3>
+<span class="bg-[#065f461a] text-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm">Nomina</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Air</p>
+</div>
+<button class="p-2 rounded-full hover:bg-error-container/10 transition-all" onclick="removeItem(this)">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- List Item 4 -->
+<div class="group relative flex items-center justify-between bg-white p-md rounded-xl shadow-sm border border-transparent transition-all hover:border-primary-container active:scale-[0.98]">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Pio</h3>
+<span class="bg-[#065f461a] text-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm">Partikel</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Apa</p>
+</div>
+<button class="p-2 rounded-full hover:bg-error-container/10 transition-all" onclick="removeItem(this)">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+</div>
+<!-- Empty State -->
+<div class="hidden flex-col items-center justify-center pt-20 text-center" id="empty-state">
+<div class="w-48 h-48 mb-lg relative">
+<img alt="Empty Favorites Illustration" class="w-full h-full opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoMSrNcxCcFPseE4T8p2SAJqIW2RLXW9AgU9bDfPgfWUovMksGiXNrzZWgxQGTXTCsePtM5jYZNy8lK22cQw76xzatQh90tyaNlfkejSzyPofwqc6Rr3joNzza3Bc_3NHzlUmSQKaTgyROgYNrDX3oYii4M3oyb0uKATjGgaEnQzzaQPQpxAwQuZi4Y3dxCSk7vDGN-cO5Q7srifMY5PaxSlvfyOj5CIsA4di_W4_A3iAK4pL853kw6g">
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Belum ada favorit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-12">Simpan kata-kata yang ingin kamu pelajari lagi nanti dengan menekan ikon hati.</p>
+<button class="mt-lg bg-primary text-white px-lg py-sm rounded-lg font-label-md text-label-md transition-all hover:opacity-90 active:scale-95">
+                Cari Kata Sekarang
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-white border-t border-gray-100">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-low rounded-xl transition-colors" href="{{DATA:SCREEN:SCREEN_4}}">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary text-white rounded-xl px-6 py-1 active:scale-95 transition-transform duration-150" href="{{DATA:SCREEN:SCREEN_6}}">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm">Favorites</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-low rounded-xl transition-colors" href="{{DATA:SCREEN:SCREEN_7}}">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-low rounded-xl transition-colors" href="{{DATA:SCREEN:SCREEN_2}}">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script src="assets/js/app.js"></script>
+</body></html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>History - Kamus Paser</title>
+<script src="assets/js/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen text-on-surface">
+<!-- Top AppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#FDF5E6] dark:bg-surface-dim h-16 flex items-center justify-between px-margin-mobile max-w-screen-xl mx-auto border-b border-outline-variant">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined emerald-text hover:opacity-80 transition-opacity active:scale-95" onclick="window.location.href='{{DATA:SCREEN:SCREEN_9}}'">menu</button>
+<h1 class="font-display-lg text-display-lg font-bold emerald-text">Kamus Paser</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-opacity">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-opacity">delete_sweep</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-24 pb-32 px-margin-mobile max-w-2xl mx-auto min-h-screen">
+<!-- Header Section -->
+<div class="mb-lg">
+<h2 class="font-headline-md text-headline-md emerald-text mb-xs">History</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Review your recently searched words and translations.</p>
+</div>
+<!-- Group: Today -->
+<section class="mb-xl">
+<div class="flex items-center justify-between mb-sm">
+<h3 class="font-label-md text-label-md text-outline uppercase tracking-wider">Today</h3>
+<span class="font-label-sm text-label-sm text-outline">Oct 24, 2023</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-md border-b border-outline-variant hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm emerald-text group-active:scale-95 transition-transform">Taka</span>
+<span class="font-body-md text-body-md text-secondary">Kita / Kami</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-outline">14:32</span>
+<span class="material-symbols-outlined text-outline group-hover:emerald-text transition-colors">arrow_forward_ios</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-md border-b border-outline-variant hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm emerald-text">Kempu</span>
+<span class="font-body-md text-body-md text-secondary">Cucu</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-outline">09:15</span>
+<span class="material-symbols-outlined text-outline group-hover:emerald-text transition-colors">arrow_forward_ios</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-md hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm emerald-text">Sungei</span>
+<span class="font-body-md text-body-md text-secondary">Sungai</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-outline">08:02</span>
+<span class="material-symbols-outlined text-outline group-hover:emerald-text transition-colors">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Group: Yesterday -->
+<section class="mb-xl">
+<div class="flex items-center justify-between mb-sm">
+<h3 class="font-label-md text-label-md text-outline uppercase tracking-wider">Yesterday</h3>
+<span class="font-label-sm text-label-sm text-outline">Oct 23, 2023</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-md border-b border-outline-variant hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm emerald-text">Olo</span>
+<span class="font-body-md text-body-md text-secondary">Hari</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-outline">18:45</span>
+<span class="material-symbols-outlined text-outline group-hover:emerald-text transition-colors">arrow_forward_ios</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-md hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm emerald-text">Bura</span>
+<span class="font-body-md text-body-md text-secondary">Putih</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-outline">11:20</span>
+<span class="material-symbols-outlined text-outline group-hover:emerald-text transition-colors">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Learning Progress -->
+<div class="mt-xl p-lg rounded-xl bg-primary-container/10 border border-primary-container/20 relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline-sm text-headline-sm emerald-text mb-xs">Learning Progress</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[240px]">You've explored 12 new Paser words this week. Keep going to master the language!</p>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-20">
+<span class="material-symbols-outlined text-[120px] emerald-text" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-[#FDF5E6] dark:bg-surface-dim shadow-[0_-1px_0_0_rgba(0,0,0,0.05)]">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-xl transition-colors active:scale-95 duration-150" href="{{DATA:SCREEN:SCREEN_4}}">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<!-- Favorites -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-xl transition-colors active:scale-95 duration-150" href="{{DATA:SCREEN:SCREEN_6}}">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-sm text-label-sm">Favorites</span>
+</a>
+<!-- History (ACTIVE) -->
+<a class="flex flex-col items-center justify-center emerald-bg text-white rounded-xl px-4 py-1 transition-all duration-200" href="{{DATA:SCREEN:SCREEN_7}}">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-label-sm text-label-sm font-bold">History</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-xl transition-colors active:scale-95 duration-150" href="{{DATA:SCREEN:SCREEN_2}}">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script src="assets/js/app.js"></script>
+</body></html>

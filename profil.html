@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Profil - Kamus Paser</title>
+<script src="assets/js/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md flex items-center justify-between px-margin-mobile h-16 border-b border-outline-variant/30">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface hover:opacity-80 transition-opacity" onclick="window.location.href='{{DATA:SCREEN:SCREEN_9}}'">menu</button>
+<h1 class="font-display-lg text-2xl font-bold text-primary">Kamus Paser</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant transition-all duration-200 hover:text-primary" onclick="window.location.href='{{DATA:SCREEN:SCREEN_9}}'">search</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pt-24 px-margin-mobile max-w-screen-md mx-auto">
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center mb-xl">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1 bg-surface-container-lowest shadow-lg overflow-hidden transition-transform duration-300 group-hover:scale-105">
+<img alt="User Avatar" class="w-full h-full object-cover rounded-full" data-alt="A high-quality studio portrait of a friendly Southeast Asian man in his late 20s, smiling warmly. The lighting is soft and professional, emphasizing a modern corporate aesthetic. The background is a clean, minimalist off-white, maintaining a bright light-mode feel. The overall visual style is elegant, clear, and high-end, fitting for a premium mobile application profile section." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsvAgdi1gs2YAbaVfhP5dXN4lhpIGjBLL1CAOn0aMI5uHQwp7ovUBKu2xDTkNWTs_-wcF2TskmEL2Wf7OhMXZF_edVOJNbehyeZ0uSB8nTqKOZsb402NIU-bC5aE8VSbK3qn25_JWTSvMgRIBcRhU_x7N7g4_8KBS0IoH5kZaAGpIs0mfhgE4J90uCZbxPd7ny5n8qEfLd6tMdugpjqLyc88pip_FRvFRpcVGQQBXkFYoZ0nyIXbm2_g">
+</div>
+<button class="absolute bottom-1 right-1 bg-primary text-on-primary w-8 h-8 rounded-full flex items-center justify-center shadow-md border-2 border-surface transition-all active:scale-95">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div class="mt-lg text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Pengguna Paser</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">pengguna@pasermu.id</p>
+</div>
+<!-- Badge Grid -->
+<div class="flex gap-sm mt-md">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-label-sm font-label-sm">Kontributor</span>
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-label-sm font-label-sm">Level 5</span>
+</div>
+</section>
+<!-- Settings List -->
+<section class="space-y-gutter">
+<!-- General Settings Block -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-2 shadow-sm">
+<h3 class="px-4 py-3 font-label-md text-label-md text-primary uppercase tracking-wider font-bold">Aktivitas &amp; Privasi</h3>
+<div class="space-y-1">
+<!-- Item 1 -->
+<a class="flex items-center justify-between p-4 rounded-lg hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">person_outline</span>
+</div>
+<div>
+<span class="font-body-md text-body-md text-on-surface block font-bold">Pengaturan Akun</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ubah kata sandi dan profil</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<!-- Item 2 -->
+<a class="flex items-center justify-between p-4 rounded-lg hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">info</span>
+</div>
+<div>
+<span class="font-body-md text-body-md text-on-surface block font-bold">Tentang Aplikasi</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Versi 2.4.0 (Stabil)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Support Block -->
+<div class="grid grid-cols-2 gap-gutter">
+<button class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 flex flex-col items-center gap-3 text-center transition-all hover:shadow-md hover:-translate-y-1 active:scale-95 group">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant">star</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-bold">Beri Rating</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dukung Kami</span>
+</div>
+</button>
+<button class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 flex flex-col items-center gap-3 text-center transition-all hover:shadow-md hover:-translate-y-1 active:scale-95 group">
+<div class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-error">logout</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-error block font-bold">Keluar</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sesi Berakhir</span>
+</div>
+</button>
+</div>
+<!-- Stats Micro-Dashboard -->
+<div class="p-lg rounded-xl bg-primary text-on-primary flex justify-between items-center relative overflow-hidden">
+<div class="relative z-10">
+<p class="font-label-sm text-label-sm opacity-80">Kontribusi Kata</p>
+<p class="font-display-lg text-display-lg leading-none mt-xs">124</p>
+</div>
+<div class="relative z-10 text-right">
+<p class="font-label-sm text-label-sm opacity-80">Pencarian Favorit</p>
+<p class="font-headline-sm text-headline-sm mt-xs">42 Kata</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-white border-t border-outline-variant/30">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-low rounded-xl transition-colors" href="{{DATA:SCREEN:SCREEN_4}}">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-low rounded-xl transition-colors" href="{{DATA:SCREEN:SCREEN_6}}">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-sm text-label-sm">Favorites</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-low rounded-xl transition-colors" href="{{DATA:SCREEN:SCREEN_7}}">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary text-on-primary rounded-xl px-4 py-1 scale-95 transition-transform duration-150" href="{{DATA:SCREEN:SCREEN_2}}">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script src="assets/js/app.js"></script>
+</body></html>
